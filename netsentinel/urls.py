@@ -29,7 +29,8 @@ def home(request):
 
 
 urlpatterns = [
-    path('', home),  # <--- Root URL
+    # path('', home),  # <--- Root URL
+    path('', include('ui.urls')),
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
 ]
